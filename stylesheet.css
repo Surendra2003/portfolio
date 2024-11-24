@@ -544,10 +544,15 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(359px,auto));
 }
 .row{
+    
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+}
+.row h5{
+    align-content: center;
+
 }
 .row img{
     width: 100%;
@@ -577,7 +582,7 @@ section{
 
 }
 .layer h5{
-    color: #000;
+    color: #05f6f6;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -778,30 +783,10 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
-
     }
 
     100% {
@@ -826,8 +811,6 @@ section{
 }
 
 
-
-
 @keyframes slideTop {
     0% {
         transform: translateY(100px);
@@ -840,7 +823,6 @@ section{
         opacity: 1;
 
     }
-
 
 }
 
@@ -855,5 +837,124 @@ section{
         transform: translateY(0px);
         opacity: 1;
 
+    }
+}
+
+
+
+
+
+
+/* General adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+    .home {
+        background: none;
+    }
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .btn-box {
+        padding: 10px 80px;
+    }
+
+    .about {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+
+    .container1 {
+        width: 100%; /* Full-width */
+        margin: 0;
+        padding: 20px;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+
+    .contact {
+        grid-template-columns: 1fr; /* Stack columns */
+        padding: 10px;
+    }
+
+    .contact-text h2 {
+        font-size: 50px;
+    }
+
+    .contact-text p,
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-button {
+        margin: 0 auto; /* This ensures the button is centered within its container */
+    }
+}
+
+/* Further adjustments for very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    .home {
+        background: none;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+    }
+
+    .btn-box {
+        padding: 8px 60px;
+        font-size: 14px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .contact-text h2 {
+        font-size: 36px;
+    }
+
+    .services-list div {
+        padding: 20px;
+    }
+    .about-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-button {
+        margin: 0 auto; /* This ensures the button is centered within its container */
     }
 }
